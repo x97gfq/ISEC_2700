@@ -1,0 +1,9 @@
+.loginbox {
+    width: 250px;
+    margin: auto;
+    background-color: rgb(113, 200, 255);
+    border: solid blue 4px;
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
