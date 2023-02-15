@@ -7,7 +7,7 @@ def rot13(text):
    return text.translate(rot13trans)
 
 def main():
-   txt = "AFPP VF NJRFBZR"
+   txt = "ROT13 Algorithm"
    print(rot13(txt))
 	
 if __name__ == "__main__":

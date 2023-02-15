@@ -17,6 +17,11 @@ def xor_strings(s, t) -> bytes:
         return bytes([a ^ b for a, b in zip(s, t)])
 
 
+#https://stackoverflow.com/questions/26802581/can-anyone-identify-this-encoding
+#This is binary data held in a Python bytes object. Loosely, bytes that map to 
+# printable ASCII characters are presented as those ASCII characters. All other 
+# bytes are encoded \x** where ** is the hex representation of the byte.
+
 message = 'This is a secret message'
 print('Message:', message)
 
@@ -25,6 +30,8 @@ print('Key:', key)
 
 cipherText = xor_strings(message.encode('utf8'), key)
 print('cipherText:', cipherText)
+
+#decode it
 print('decrypted:', xor_strings(cipherText, key).decode('utf8'))
 
 # Verify

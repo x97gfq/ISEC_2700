@@ -1,8 +1,8 @@
 #based on source @ https://www.tutorialspoint.com/cryptography_with_python/cryptography_with_python_encryption_of_transposition_cipher.htm
 
 def main():
-   myMessage = 'BURRIDGE'
-   myKey = 3
+   myMessage = 'Transposition Cipher'
+   myKey = 6
    ciphertext = encryptMessage(myKey, myMessage)
    
    print("Cipher Text is: " + ciphertext)
