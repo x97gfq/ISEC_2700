@@ -1,14 +1,18 @@
+import os
 from cryptography.fernet import Fernet 
 
 input_file = input('What file to decrypt? (*.encrypted): ')
 key = input('Key? ')
 key = str.encode(key) #using your key from the encryption... (this is encoded as a byte array)
 
-output_file = input_file.replace("encrypted","decrypted")
+fullpath = os.getcwd() + "\CryptographyExamples\\Fernet\\" + input_file
+print("decrypting: " + fullpath)
+
+output_file = fullpath.replace("encrypted","decrypted")
 
 print("\nUsing key: " + key.decode("utf-8") + "\n")
 
-with open(input_file, 'rb') as f:
+with open(fullpath, 'rb') as f:
     data = f.read()
 
 fernet = Fernet(key)

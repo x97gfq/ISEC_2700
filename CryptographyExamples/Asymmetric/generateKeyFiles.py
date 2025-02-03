@@ -1,4 +1,5 @@
 # adapted from source https://nitratine.net/blog/post/asymmetric-encryption-and-decryption-in-python/
+import os
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.asymmetric import rsa
@@ -26,7 +27,7 @@ pem = private_key.private_bytes(
     encryption_algorithm=serialization.NoEncryption()
 )
 
-with open('private_key.pem', 'wb') as f:
+with open(os.getcwd() + "\CryptographyExamples\\Asymmetric\\private_key.pem", "wb") as f:
     f.write(pem)
 
 pem = public_key.public_bytes(
@@ -34,5 +35,5 @@ pem = public_key.public_bytes(
     format=serialization.PublicFormat.SubjectPublicKeyInfo
 )
 
-with open('public_key.pem', 'wb') as f:
+with open(os.getcwd() + "\CryptographyExamples\\Asymmetric\\public_key.pem", "wb") as f:
     f.write(pem)    

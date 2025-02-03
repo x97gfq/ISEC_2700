@@ -1,4 +1,4 @@
-message = 'GEIWEVXGMTLIVXHIQS' #encrypted message
+message = 'XLMWXMWXXLIXQIWWEKIXXSXIRGVCTX' #encrypted message
 LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 for key in range(len(LETTERS)):

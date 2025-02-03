@@ -21,8 +21,8 @@ def originalText(cipher_text, key):
 
 
 if __name__ == "__main__": 
-    cipher = "UEUTCEVRRZXLJXKVFHJX"
-    key = generateKey(cipher,"RED")
+    cipher = "EBQYKWUAYQDNPKJPMB"
+    key = generateKey(cipher,"LUIGI")
     print("Original/Decrypted Text:" + originalText(cipher, key))
 
     #brute force attack:

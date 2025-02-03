@@ -1,6 +1,14 @@
 #https://en.wikipedia.org/wiki/Baudot_code
 #based on source @ https://repl.it/@GeorgeHill1/Vernam-Cipher
 
+#The Vernam cipher, also known as the one-time pad, encrypts each character 
+#of the plaintext with a corresponding character from a key of the same length
+
+#The Vernam cipher can work with the Baudot code by treating each Baudot-encoded character as a binary string. Here's a step-by-step explanation:
+#Convert Plaintext to Baudot Code: Each character in the plaintext is converted to its corresponding Baudot code. For example, "HELLO" would be converted to "11010 01000 11011 11011 11100".
+#Generate a Key: Create a random key of the same length as the Baudot-encoded plaintext. For example, if the plaintext in Baudot code is "11010 01000 11011 11011 11100", the key might be "10101 11100 00011 10101 01010".
+#XOR Operation: Perform an XOR operation between each bit of the Baudot-encoded plaintext and the corresponding bit of the key. The XOR operation is defined as:
+
 import random, datetime
 
 baudot = {
@@ -44,20 +52,23 @@ def getText(baudotCode):
 
 if __name__ == "__main__": 
 
-    msg = "WELCOMETOACADIAUNIVERSITY"
+    msg = "TESTING_THIS"
 
-    cipher = vernam(msg)
-    print("\nCipher (w/random key): " + cipher + "\n")
+    #cipher = vernam(msg)
+    #print("\nCipher (w/random key): " + cipher + "\n")
 
-    key2 = "ANNAPOLISVALLEY"
-    cipher2 = encrypt(msg, key2)
-    print("Cipher2 (encrypted w/key: " + key2 + "): " + cipher2 + "\n")
+    key = "AAAAAAAAAAAA"
+    cipher = encrypt(msg, key)
+    print("Cipher (encrypted w/key: " + key + "): " + cipher + "\n")
 
-    decrypted = encrypt(cipher2, key2)
-    print("Cipher2 " + cipher2 + " (decrypted w/key: " + key2 + "): " + decrypted + "\n")
+
+    key_to_decrypt = ""
+    cipher_to_decrypt = ""
+    decrypted = encrypt(cipher_to_decrypt, key_to_decrypt)
+    print("Cipher " + cipher + " (decrypted w/key: " + key + "): " + decrypted + "\n")
 
     #brute force attack:
-    #possibleKeys = ["BIOLOGY", "CHEMISTRY", "COMPUTERSCIENCE", "MATH", "BUSINESS"]
+    #possibleKeys = ["MARIO", "LINK", "PIKACHU", "SAMUS", "KIRBY", "FOX", "DONKEY KONG", "YOSHI", "LUIGI", "NESS"]
     #for x in range(len(possibleKeys)):
     #    key = possibleKeys[x]
     #    cipher = "MYFB_QMKZVN/.GHR/V"

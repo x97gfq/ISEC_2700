@@ -10,7 +10,7 @@ def encrypt(text,s):
    return result
 
 #check the above function
-text = "CAESAR CIPHER DEMO"
+text = "THIS IS THE MESSAGE TO ENCRYPT"
 s = 4
 
 c = encrypt(text,s)

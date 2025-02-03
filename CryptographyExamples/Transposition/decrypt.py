@@ -2,7 +2,7 @@
 import math
 
 def main():
-   myMessage= 'Toners raiCntisippoh'
+   myMessage= 'Tsmenh e citstrshsoy ea pi get'
    myKey = 6
    plaintext = decryptMessage(myKey, myMessage)
 

@@ -4,11 +4,12 @@ from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.asymmetric import padding
 import base64
+import os
 
 message = b'I LOVE NOVA SCOTIA COMMUNITY COLLEGE'
 
 #retrieve the public key from the .pem and use it here
-with open("public_key.pem", "rb") as key_file:
+with open(os.getcwd() + "\CryptographyExamples\\Asymmetric\\public_key.pem", "rb") as key_file:
     public_key = serialization.load_pem_public_key(
         key_file.read(),
         backend=default_backend()
