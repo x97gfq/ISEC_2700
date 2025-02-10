@@ -11,7 +11,7 @@ def rot13(text):
    return text.translate(rot13trans)
 
 def main():
-   txt = "This is the message to encrypt"
+   txt = "This message will self destruct"
    print(rot13(txt))
 	
 if __name__ == "__main__":

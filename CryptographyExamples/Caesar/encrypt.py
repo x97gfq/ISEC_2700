@@ -10,8 +10,8 @@ def encrypt(text,s):
    return result
 
 #check the above function
-text = "THIS IS THE MESSAGE TO ENCRYPT"
-s = 4
+text = "MAY THE FORCE BE WITH YOU"
+s = 18
 
 c = encrypt(text,s)
 

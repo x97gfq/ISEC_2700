@@ -12,8 +12,8 @@
 #Transposition ciphers are often combined with other types of ciphers to enhance security.
 
 def main():
-   myMessage = 'This is the message to encrypt'
-   myKey = 6
+   myMessage = 'Each battle, a chance to grow.'
+   myKey = 8
    ciphertext = encryptMessage(myKey, myMessage)
    
    print("Cipher Text is: " + ciphertext)

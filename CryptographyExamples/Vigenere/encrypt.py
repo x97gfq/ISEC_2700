@@ -26,8 +26,8 @@ def cipherText(string, key):
     return("" . join(cipher_text)) 
 
 if __name__ == "__main__": 
-    msg = "THISCLASSISTHEBEST"
-    keyword = "LUIGI"     #"MARIO", "LINK", "PIKACHU", "SAMUS", "KIRBY", "FOX", "DONKEY KONG", "YOSHI", "LUIGI", "NESS"
+    msg = "SMASHBROSISAWESOME"
+    keyword = "PIKACHU"     #"MARIO", "LINK", "PIKACHU", "SAMUS", "KIRBY", "FOX", "DONKEY KONG", "YOSHI", "LUIGI", "NESS"
     key = generateKey(msg, keyword) 
     cipher_text = cipherText(msg,key)
     print("Msg: " + msg)

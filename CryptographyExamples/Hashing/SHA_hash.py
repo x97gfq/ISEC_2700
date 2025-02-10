@@ -10,7 +10,7 @@ target = input('What file to hash (SHA)?: ')
 fullpath = os.getcwd() + "\CryptographyExamples\\Hashing\\" + target
 print("Using " + fullpath)
 
-with open(target, 'rb') as afile:
+with open(fullpath, 'rb') as afile:
     buf = afile.read(BLOCKSIZE)
     while len(buf) > 0:
         hasher.update(buf)
